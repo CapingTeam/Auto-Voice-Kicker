@@ -86,6 +86,7 @@ client.on('ready', () => {
         }
 
         if (message.content.startsWith(prefix + "list user")){
+            message.delete().catch(() => false)
             if (globale["users"].length < 1){
                 var slt = "Nobody"
             }
